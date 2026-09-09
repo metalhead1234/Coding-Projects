@@ -1,0 +1,11 @@
+import turtle
+sideLength = int(input("Length of Sides:"))
+window = turtle.Screen()
+marty = turtle.Turtle()
+marty.forward(sideLength)
+marty.left(90)
+marty.forward(sideLength)
+marty.left(90)
+marty.forward(sideLength)
+marty.left(90)
+marty.forward(sideLength)

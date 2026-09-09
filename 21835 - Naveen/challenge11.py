@@ -1,0 +1,8 @@
+birthCity = input("Where were you born?: ")
+age = input("How old are you?: ")
+movie = input("What is your favorite movie?: ")
+colour = input("What is your favorite colour?: ")
+iceCream = input("What is your favorite ice cream flavor?: ")
+print("You were born in "+ birthCity)
+print("You are " + age + " years old and you love "  + iceCream + " ice cream")
+print("I think one day we can watch " + movie + " together") 

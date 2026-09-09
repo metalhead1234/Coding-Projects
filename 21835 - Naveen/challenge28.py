@@ -1,0 +1,133 @@
+groceries = ["Broccoli", "Buns", "Burgers", "Oats", "Sparkling Water"]      
+print("\n=== Shopping List  ===")
+print("1. Add an item")
+print("2. Find an item")
+print("3. Remove an item")
+print("4. Sort items by alphabet")
+print("5. Count items")
+print("6. Replace item")
+print(groceries)
+
+choice = int(input("Choose an option (1-6. NO LETTERS): "))
+
+
+if (choice == 1):
+    newItem = input("What item would you like to add? ")
+    groceries.append(newItem)
+    print("\n=== Shopping List  ===")
+    print("1. Add an item")
+    print("2. Find an item")
+    print("3. Remove an item")
+    print("4. Sort items by alphabet")
+    print("5. Count items")
+    print("6. Replace item")
+    print(groceries)
+    choice = int(input("Choose an option: "))
+    
+
+elif (choice == 2):
+    findItem = input("What Item are you looking for? ")
+    if findItem in groceries:       
+        print("\n=== Shopping List  ===")
+        print("1. Add an item")
+        print("2. Find an item")
+        print("3. Remove an item")
+        print("4. Sort items by alphabet")
+        print("5. Count items")
+        print("6. Replace item")
+        print(groceries)
+        print("This item is included.")
+        choice = int(input("Choose an option: "))
+    else:        
+        print("\n=== Shopping List  ===")
+        print("1. Add an item")
+        print("2. Find an item")
+        print("3. Remove an item")
+        print("4. Sort items by alphabet")
+        print("5. Count items")
+        print("6. Replace item")
+        print(groceries)
+        print("Item is not included. Press 1 to add it.")
+        choice = int(input("Choose an option: "))
+
+
+elif (choice == 3 ): 
+   removed = input("Which item would you like to remove?")
+   if (removed in groceries): 
+      groceries.remove(removed)
+      print("\n=== Shopping List  ===")
+      print("1. Add an item")
+      print("2. Find an item")
+      print("3. Remove an item")
+      print("4. Sort items by alphabet")
+      print("5. Count items")
+      print("6. Replace item")
+      print(groceries)
+      choice = int(input("Choose an option: "))
+
+   else:  
+      print("This item is not included in the list.")
+      print(groceries)
+      print("\n=== Shopping List  ===")
+      print("1. Add an item")
+      print("2. Find an item")
+      print("3. Remove an item")
+      print("4. Sort items by alphabet")
+      print("5. Count items")
+      print("6. Replace item")
+      print(groceries)
+      choice = int(input("Choose an option: "))
+
+
+elif (choice == 4):
+   groceries.sort()
+   print(groceries)
+   print("\n=== Shopping List ===")
+   print("1. Add an item")
+   print("2. Find an item")
+   print("3. Remove an item")
+   print("4. Sort items by alphabet")
+   print("5. Count items")  
+   print(groceries)
+   choice = int(input("Choose an option: "))
+
+elif (choice == 5): 
+   destinationCount = len(groceries)
+   print("There are " + str(destinationCount) + " destinations included.")
+   print("\n=== Shopping List  ===")
+   print("1. Add an item")
+   print("2. Find an item")
+   print("3. Remove an item")
+   print("4. Sort items by alphabet")
+   print("5. Count items")
+   print("6. Replace item")
+   print(groceries)
+   choice = int(input("Choose an option: "))
+
+else:
+   replaced = input("What list item would you like to replace?")
+   newItem = input("What would you like to replace it with?")
+   if (replaced in groceries):
+    index = groceries.index(replaced)
+    groceries.insert(index, newItem)
+    groceries.remove(replaced)
+    print("\n=== Shopping List  ===")
+    print("1. Add an item")
+    print("2. Find an item")
+    print("3. Remove an item")
+    print("4. Sort items by alphabet")
+    print("5. Count items")
+    print("6. Replace item")
+    print(groceries)
+    choice = int(input("Choose an option: "))
+   if (newItem in groceries):
+       print("The new item is included in the list already.")
+       print("\n=== Shopping List  ===")
+       print("1. Add an item")
+       print("2. Find an item")
+       print("3. Remove an item")
+       print("4. Sort items by alphabet")
+       print("5. Count items")
+       print("6. Replace item")
+       print(groceries)
+       choice = int(input("Choose an option: "))
